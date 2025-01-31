@@ -23,7 +23,8 @@ func main() {
 	// 注册路由
 	http.HandleFunc("/", api.HandleChat)
 	http.HandleFunc("/v1/chat/completions", api.HandleChat)
-	http.HandleFunc("/v1/images/generations", api.HandleImageGeneration)
+	http.HandleFunc("/v1/images/generations", api.HandleImageGenerations)
+	http.HandleFunc("/web/v2/image-generation", api.HandleImageGeneration)
 
 	// 启动服务器
 	port := "8081"
